@@ -1,167 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Digest</title>
+<style>
+  :root {
+    --bg: #FAFAFA;
+    --card: #FFFFFF;
+    --text: #1D1D1F;
+    --meta: #86868B;
+    --accent: #9C8A5C;
+    --border: #E5E5E5;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  /* ---- Day section ---- */
+  .day {
+    margin-bottom: 56px;
+  }
+
+  .day-date, h2 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 28px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .day:first-of-type .day-date,
+  .day:first-of-type h2 {
+    font-size: 32px;
+  }
+
+  /* ---- Category group ---- */
+  .category {
+    margin-bottom: 28px;
+  }
+
+  .category-label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  /* ---- Card grid ---- */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  @media (min-width: 600px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text);
+    margin: 0;
+    opacity: 0.85;
+  }
+
+  .card a {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    margin-top: 4px;
+  }
+
+  .card a:hover { text-decoration: underline; }
+
+  /* ---- Empty / placeholder state ---- */
+  .empty-note {
+    font-size: 14px;
+    color: var(--meta);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
 <div class="day"><h2>June 20, 2026</h2><div class="category">
-  <p class="category-label">AI</p>
-  <div class="grid">
-    <div class="card">
-      <h3>Palmier Launches a Video Editor Built for AI</h3>
-      <p>The YC-backed Mac-native editor lets Claude or Codex generate, organize, and trim footage directly in-app, integrating with leading video models so creators never have to jump between platforms.</p>
-      <a href="https://www.palmier.io/">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Kimi Work Now Runs 24/7 Until Your Task Is Done</h3>
-      <p>Moonshot AI's new Goal Mode keeps its desktop AI agent working autonomously on long-horizon, multi-step jobs until the objective is fully complete.</p>
-      <a href="https://www.kimi.com/products/kimi-work">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Adobe Firefly AI Assistant Now Executes Across Its Apps</h3>
-      <p>Adobe's Firefly can now carry out multi-step creative tasks across Premiere, Photoshop, InDesign, and more, with pending integration into ChatGPT, Claude, Gemini, Copilot, and Slack.</p>
-      <a href="https://news.adobe.com/news/2026/06/adobe-unveils-major-expansion">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>OpenRouter Fusion Outperforms Any Single LLM</h3>
-      <p>Fusion runs your prompt through multiple top models simultaneously and synthesizes their responses into one answer, claiming to significantly outperform any individual frontier model.</p>
-      <a href="https://openrouter.ai/fusion">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Microsoft Copilot Cowork Now Generally Available</h3>
-      <p>Microsoft's agentic workplace assistant is open to all Microsoft 365 users and is priced 30–40% below Anthropic's Claude Cowork, making AI-powered workplace collaboration more accessible.</p>
-      <a href="https://www.microsoft.com/en-us/microsoft-365-copilot/cowork">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Meta Launches AI Mode on Facebook</h3>
-      <p>A new search tab powered by AI draws on publicly shared posts across Meta's apps, even as internal staff morale reportedly hits a two-decade low amid heavy layoffs and restructuring.</p>
-      <a href="https://about.fb.com/news/2026/06/new-ai-tools-to-help-you-make-things-happen-on-facebook/">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Study: AI Worker Training Pays Off More Than Layoffs</h3>
-      <p>New PwC research finds that companies using AI to amplify employees rather than replace them are seeing faster headcount and wage growth, suggesting mass automation layoffs may be a strategic mistake.</p>
-      <a href="https://www.thedeepview.com/articles/why-tech-companies-jumped-the-gun-on-ai-layoffs">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>How Databricks Turned Openness Into an AI Moat</h3>
-      <p>Databricks unveiled an open agentic AI stack at its Data + AI Summit — including OpenSharing, Omnigent, and DBRX — arguing that avoiding vendor lock-in is both a competitive advantage and a customer trust builder.</p>
-      <a href="https://www.thedeepview.com/articles/how-databricks-turned-openness-into-an-ai-moat">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Midjourney's Wild Medical Hardware Pivot</h3>
-      <p>Midjourney revealed a full-body ultrasound scanner that maps the body in 60 seconds, with plans to house the devices inside its own spas starting in 2027 in San Francisco.</p>
-      <a href="https://www.midjourney.com/medical/blogpost">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>OpenAI Poaches Transformer Pioneer Noam Shazeer from Google</h3>
-      <p>Noam Shazeer, co-author of the landmark "Attention Is All You Need" paper and Gemini co-lead, is leaving Google for OpenAI just two years after Google paid $2.7B to bring him back from Character.AI.</p>
-      <a href="https://x.com/NoamShazeer/status/2067400851438932297">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Securing the Future of AI Agents</h3>
-      <p>Google DeepMind published an AI Control Roadmap outlining security measures designed to address misaligned and increasingly capable AI agents beyond standard alignment techniques.</p>
-      <a href="https://deepmind.google/blog/securing-the-future-of-ai-agents/">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Persistent Agent Memory Layer Built on Elasticsearch</h3>
-      <p>A multi-index architecture using Elasticsearch separates episodic, semantic, and procedural memory to give AI agents high-recall, long-term memory with zero tenant data leaks.</p>
-      <a href="https://www.elastic.co/search-labs/blog/agent-memory-elasticsearch">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Enterprise-Managed Authorization: Zero-Touch OAuth for MCP</h3>
-      <p>A stable extension for the Model Context Protocol lets organizations centralize single sign-on access to MCP servers via identity providers, reducing security overhead for enterprise AI deployments.</p>
-      <a href="https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/">Read more →</a>
-    </div>
-  </div>
-</div>
-
-<div class="category">
-  <p class="category-label">Robotics</p>
-  <div class="grid">
-    <div class="card">
-      <h3>Waymo Recalls Nearly 4,000 Robotaxis After Several Drive Into Construction Zones</h3>
-      <p>Waymo issued a recall after multiple autonomous vehicles drove into highway construction areas, highlighting ongoing safety edge-case challenges for self-driving fleets at scale.</p>
-      <a href="https://techcrunch.com/2026/06/18/waymo-recalls-nearly-4000-robotaxis-to-stop-them-driving-into-highway-construction-zones/">Read more →</a>
-    </div>
-  </div>
-</div>
-
-<div class="category">
-  <p class="category-label">Dev</p>
-  <div class="grid">
-    <div class="card">
-      <h3>Cell-Based Architecture for Resilient Payment Systems</h3>
-      <p>American Express details how isolating its core payments ecosystem into independent cells limits failure blast radius and keeps the system highly available even during incidents.</p>
-      <a href="https://americanexpress.io/cell-based-architecture-for-resilient-payment-systems/">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Large-Scale Malware Distribution Discovered on GitHub</h3>
-      <p>A researcher uncovered 10,000 GitHub repositories distributing Trojan malware disguised under various names, using frequent commit deletions and re-adds to evade detection.</p>
-      <a href="https://orchidfiles.com/github-repositories-distributing-malware/">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Why We're Bullish on Loops</h3>
-      <p>Loops let AI agents autonomously complete tasks without manual engineer prompts, pointing toward a shift from assisted tools to self-driving products built around goals, context, and evaluation.</p>
-      <a href="https://newsletter.posthog.com/p/why-were-bullish-on-loops">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Flue: A Framework for Autonomous Agents in TypeScript</h3>
-      <p>Flue lets developers build agents that maintain context, execute complex workflows, and run securely in a sandbox without needing predefined action sequences.</p>
-      <a href="https://github.com/withastro/flue">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Agent-Native: Open-Source Framework for Interconnected AI Apps</h3>
-      <p>Agent-Native enables agents and user interfaces to run together seamlessly — as headless APIs, chat experiences, or full apps — with real-time sync and context awareness.</p>
-      <a href="https://github.com/BuilderIO/agent-native">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Kubernetes in the Age of AI</h3>
-      <p>Kubernetes has evolved beyond container orchestration into a core AI infrastructure platform, helping organizations efficiently manage generative and agentic AI workloads at scale.</p>
-      <a href="https://www.oreilly.com/radar/kubernetes-in-the-age-of-ai/">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Is "Agent Readiness" a Real Category — or Just Snake Oil?</h3>
-      <p>Platforms like Cloudflare and Google are pushing AI agent compatibility scores, but the concept conflates two distinct problems and may not deliver the tangible benefits being promised.</p>
-      <a href="https://nekuda.substack.com/p/is-agent-readiness-a-real-category">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Forced Consent Cost Elkjop €1.8 Million</h3>
-      <p>Norway fined retailer Elkjop for requiring customers to accept marketing communications to access membership benefits, reinforcing that GDPR consent must be freely given — not coerced.</p>
-      <a href="https://www.thatprivacyguy.com/blog/elkjop-forced-consent-fine/">Read more →</a>
-    </div>
-  </div>
-</div>
-
-<div class="category">
-  <p class="category-label">Design</p>
-  <div class="grid">
-    <div class="card">
-      <h3>Snap Specs Are a Breakthrough Step, Not a Must-Buy</h3>
-      <p>Snap's new AR glasses offer a 115-inch virtual screen and true spatial anchoring in a surprisingly compact 132g frame, but at $2,195 they remain an early-adopter product ahead of mainstream readiness.</p>
-      <a href="https://www.thedeepview.com/articles/snap-specs-are-a-breakthrough-step-not-a-must-buy">Read more →</a>
-    </div>
-  </div>
-</div>
-
-<div class="category">
-  <p class="category-label">General Tech</p>
-  <div class="grid">
-    <div class="card">
-      <h3>Google Home Speaker Opens Pre-Orders After Six Years</h3>
-      <p>Google's first new smart speaker in six years uses Gemini to understand conversational requests and multistep commands, signaling a major upgrade to the company's home hardware line.</p>
-      <a href="https://store.google.com/product/google_home_speaker">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Amazon in Talks to Sell Trainium AI Chips to Third-Party Data Centers</h3>
-      <p>Amazon is exploring selling its in-house Trainium chips to external data centers, a move that would pit its custom silicon directly against Nvidia in the broader AI infrastructure market.</p>
-      <a href="https://www.bloomberg.com/news/articles/2026-06-18/amazon-is-in-talks-to-sell-nvidia-rival-chips-to-other-companies">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Microsoft Makes Headway Selling AI to Chinese Companies</h3>
-      <p>Microsoft is growing its AI business in China by licensing OpenAI models, carving out a significant revenue stream despite the geopolitical tensions surrounding US AI exports.</p>
-      <a href="https://www.bloomberg.com/news/articles/2026-06-17/microsoft-s-china-ai-business-grows-on-openai-model-sales">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>General Intuition in Talks to Raise $300 Million at $2 Billion Valuation</h3>
-      <p>The AI startup is reportedly in advanced fundraising discussions that would value it at $2 billion, reflecting continued investor appetite for frontier AI ventures.</p>
-      <a href="https://techcrunch.com/2026/06/18/general-intuition-in-talks-to-raise-300m-at-around-2b-valuation/">Read more →</a>
-    </div>
-  </div>
-</div></div><div class="day"><h2>June 20, 2026</h2><div class="category">
   <p class="category-label">AI</p>
   <div class="grid">
     <div class="card">
@@ -324,133 +285,7 @@
       <a href="https://techcrunch.com/2026/06/18/general-intuition-in-talks-to-raise-300m-at-around-2b-valuation/">Read more →</a>
     </div>
   </div>
-</div></div><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Digest</title>
-<style>
-  :root {
-    --bg: #FAFAFA;
-    --card: #FFFFFF;
-    --text: #1D1D1F;
-    --meta: #86868B;
-    --accent: #9C8A5C;
-    --border: #E5E5E5;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    padding: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .wrap {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 32px 20px 80px;
-  }
-
-  /* ---- Day section ---- */
-  .day {
-    margin-bottom: 56px;
-  }
-
-  .day-date {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin: 0 0 28px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .day:first-of-type .day-date {
-    font-size: 32px;
-  }
-
-  /* ---- Category group ---- */
-  .category {
-    margin-bottom: 28px;
-  }
-
-  .category-label {
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--accent);
-    margin: 0 0 12px;
-  }
-
-  /* ---- Card grid ---- */
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  @media (min-width: 600px) {
-    .grid { grid-template-columns: 1fr 1fr; }
-  }
-
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 18px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .card h3 {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.3;
-    margin: 0;
-    letter-spacing: -0.01em;
-  }
-
-  .card p {
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--text);
-    margin: 0;
-    opacity: 0.85;
-  }
-
-  .card a {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration: none;
-    margin-top: 4px;
-  }
-
-  .card a:hover { text-decoration: underline; }
-
-  /* ---- Empty / placeholder state ---- */
-  .empty-note {
-    font-size: 14px;
-    color: var(--meta);
-    font-style: italic;
-  }
-</style>
-</head>
-<body>
-<div class="wrap">
-
-  <div class="day">
-    <h1 class="day-date">Welcome</h1>
-    <p class="empty-note">Your first digest will appear here after the next scheduled run.</p>
-  </div>
+</div></div>
 
 </div>
 </body>
