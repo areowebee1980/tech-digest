@@ -657,5 +657,12 @@
 </div></div>
 
 </div>
+  <script>
+  function sendHeight() {
+    window.parent.postMessage({ digestHeight: document.body.scrollHeight }, "*");
+  }
+  window.addEventListener("load", sendHeight);
+  window.addEventListener("resize", sendHeight);
+</script>
 </body>
 </html>
