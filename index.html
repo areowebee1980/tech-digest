@@ -1,4 +1,99 @@
-<div class="day"><h2>October 19, 2026</h2><div class="category">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Digest</title>
+<style>
+  :root {
+    --bg: #FAFAFA;
+    --card: #FFFFFF;
+    --text: #1D1D1F;
+    --meta: #86868B;
+    --accent: #9C8A5C;
+    --border: #E5E5E5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  .day { margin-bottom: 56px; }
+  .day h2, .day-date {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 28px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .day:first-of-type h2,
+  .day:first-of-type .day-date { font-size: 32px; }
+  .category { margin-bottom: 28px; }
+  .category-label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 600px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text);
+    margin: 0;
+    opacity: 0.85;
+  }
+  .card a {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    margin-top: 4px;
+  }
+  .card a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="day">
+<h2>October 19, 2026</h2>
+<div class="category">
   <p class="category-label">AI</p>
   <div class="grid">
     <div class="card">
@@ -168,9 +263,11 @@
       <p>Ramp and Stripe have each built internal AI coding platforms that let non-engineers create tools using company data, with Stripe's Harbor built by a single engineer in about six weeks and Ramp's Glass now part of new-hire onboarding.</p>
       <a href="https://newsletter.pragmaticengineer.com/p/the-pulse-new-trend-of-building-internal-aeb">Read more →</a>
     </div>
-    <div class="card">
-      <h3>Gemini 4 Argon vs. Claude Opus 5.5</h3></div><div class="day"><h2>October 19, 2026</h2><div class="category">
-  <p class="category-label">AI</p>
+  </div>
+</div>
+
+<div class="category">
+  <p class="category-label">General Tech</p>
   <div class="grid">
     <div class="card">
       <h3>Colossal Claims It's Increasingly Close to Bringing Back the Dodo</h3>
@@ -188,17 +285,6 @@
       <a href="https://www.amazon.com/b/ref=glow_cls?ie=UTF8&node=223193081011">Read more →</a>
     </div>
     <div class="card">
-      <h3>Bookmark App Combines Saved Content with AI Answers</h3>
-      <p>A new app is trying to fix the read-it-later graveyard problem by unifying saved articles, PDFs, bookmarks, highlights, and AI-powered answers into one searchable personal library.</p>
-      <a href="https://archive.superhuman.ai/2110385721391366263">Read more →</a>
-    </div>
-  </div>
-</div>
-
-<div class="category">
-  <p class="category-label">General Tech</p>
-  <div class="grid">
-    <div class="card">
       <h3>Tesla Unveils SpaceX-Powered Roadster That Briefly Flies</h3>
       <p>Tesla's redesigned Roadster uses SpaceX-inspired compressed-air thrusters to lift off the ground for short gravity-defying leaps, generating massive buzz as the closest thing yet to a consumer flying car.</p>
       <a href="https://techcrunch.com/2026/10/15/tesla-reveals-spacex-powered-roadster-that-flies-and-falls-with-style/">Read more →</a>
@@ -212,21 +298,6 @@
       <h3>Hidden Magnetic Force May Be Altering Your Lifespan</h3>
       <p>University of Nottingham scientists found fruit flies lived around 20% longer when shielded from Earth's magnetism, raising intriguing questions about how magnetic fields affect longevity and deep-space travel.</p>
       <a href="https://www.sciencefocus.com/news/an-invisible-force-could-be-changing-your-lifespan-study-suggests">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Godox C100: A Pocket Camera You Look Through Like a Window</h3>
-      <p>The Godox C100 is a uniquely designed compact camera built for everyday photos and video that lets you view the scene directly through the body rather than via a screen.</p>
-      <a href="https://www.godox.com/product-e/C100.html">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Form Studio 1: Affordable Resin 3D Printer for Home Use</h3>
-      <p>Formlabs' Form Studio 1 brings high-detail resin printing with hands-off resin handling and indoor-safe operation to a more accessible price point.</p>
-      <a href="https://formlabs.com/global/3d-printers/form-studio-1/">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Jetson ONE eVTOL: A Formula 1 Car for the Sky</h3>
-      <p>A viral video of the Jetson ONE personal electric aircraft is recirculating on social media, offering a striking early glimpse of what consumer personal aviation could eventually look like.</p>
-      <a href="https://archive.superhuman.ai/2109662877665911266">Read more →</a>
     </div>
     <div class="card">
       <h3>Man Jailed for Generating Billions of Fake Music Streams</h3>
@@ -249,12 +320,32 @@
       <a href="https://www.sciencedaily.com/releases/2026/10/261014015501.htm">Read more →</a>
     </div>
     <div class="card">
+      <h3>Godox C100: A Pocket Camera You Look Through Like a Window</h3>
+      <p>The Godox C100 is a uniquely designed compact camera built for everyday photos and video that lets you view the scene directly through the body rather than via a screen.</p>
+      <a href="https://www.godox.com/product-e/C100.html">Read more →</a>
+    </div>
+    <div class="card">
+      <h3>Form Studio 1: Affordable Resin 3D Printer for Home Use</h3>
+      <p>Formlabs' Form Studio 1 brings high-detail resin printing with hands-off resin handling and indoor-safe operation to a more accessible price point.</p>
+      <a href="https://formlabs.com/global/3d-printers/form-studio-1/">Read more →</a>
+    </div>
+    <div class="card">
+      <h3>Jetson ONE eVTOL: A Formula 1 Car for the Sky</h3>
+      <p>A viral video of the Jetson ONE personal electric aircraft is recirculating on social media, offering a striking early glimpse of what consumer personal aviation could eventually look like.</p>
+      <a href="https://archive.superhuman.ai/2109662877665911266">Read more →</a>
+    </div>
+    <div class="card">
       <h3>PhotoTat: The UV-Activated Ink That Makes Tattoos Disappear</h3>
       <p>University of Colorado Boulder researchers have developed an ink that is nearly invisible under white light but glows vividly under UV, with potential applications in both body art and medical markings.</p>
       <a href="https://interestingengineering.com/culture/scientists-create-tattoos-vanish-in-seconds">Read more →</a>
     </div>
   </div>
-</div></div><div class="day"><h2>October 18, 2026</h2><div class="category">
+</div>
+</div>
+
+<div class="day">
+<h2>October 18, 2026</h2>
+<div class="category">
   <p class="category-label">AI</p>
   <div class="grid">
     <div class="card">
@@ -321,11 +412,6 @@
       <h3>UCLA's PhoneBot Uses a Smartphone as Its Brain</h3>
       <p>UCLA scientists built PhoneBot, a 19-inch walking robot that uses an Android phone as its torso for vision, balance, and motion, with non-phone parts costing just $400 — offering an affordable entry into robotics.</p>
       <a href="https://techxplore.com/news/2026-10-phonebot-smartphones-job-legs.html">Read more →</a>
-    </div>
-    <div class="card">
-      <h3>Tesla's Roadster Goes Fully Airborne</h3>
-      <p>Tesla demonstrated the long-awaited Roadster using SpaceX cold-gas thrusters to perform midair stunts in Texas, targeting 2028 deliveries — though road legality for a thruster-equipped car remains unresolved.</p>
-      <a href="https://x.com/Kalshi/status/2110901757496959481?s=20">Read more →</a>
     </div>
     <div class="card">
       <h3>Humanoid Robots Are Now Directing Traffic in China</h3>
@@ -427,8 +513,13 @@
       <p>Leaky bucket algorithms, rooted in ancient timekeeping concepts, power modern API rate limiting and tools like PlanetScale's Postgres Traffic Control, which uses resource budgets to admit or block queries before execution.</p>
       <a href="https://planetscale.com/blog/leaky-buckets-in-software-explained">Read more →</a>
     </div>
-    <div class="card">
-      <h3</div><div class="day"><h2>October 17, 2026</h2><div class="category">
+  </div>
+</div>
+</div>
+
+<div class="day">
+<h2>October 17, 2026</h2>
+<div class="category">
   <p class="category-label">AI</p>
   <div class="grid">
     <div class="card">
@@ -495,7 +586,7 @@
 </div>
 
 <div class="category">
-  <p class="category-label">ROBOTICS</p>
+  <p class="category-label">Robotics</p>
   <div class="grid">
     <div class="card">
       <h3>Inside Amazon's Million-Robot Experiment</h3>
@@ -506,7 +597,7 @@
 </div>
 
 <div class="category">
-  <p class="category-label">DEV</p>
+  <p class="category-label">Dev</p>
   <div class="grid">
     <div class="card">
       <h3>How to Build a Personal Decision Simulator with Claude</h3>
@@ -542,12 +633,12 @@
 </div>
 
 <div class="category">
-  <p class="category-label">GENERAL TECH</p>
+  <p class="category-label">General Tech</p>
   <div class="grid">
     <div class="card">
       <h3>Tesla Unveils Next-Gen Roadster with Thruster-Powered Aerial Stunts</h3>
       <p>Elon Musk debuted a revamped Roadster that can drive upside down, perform aerial kick flips, and accelerate 0–60 in under a second using SpaceX thruster technology, with production slated for 2028.</p>
-      <a href="https://www.apple.com/apple-homeview/">Read more →</a>
+      <a href="https://techcrunch.com/2026/10/15/tesla-reveals-spacex-powered-roadster-that-flies-and-falls-with-style/">Read more →</a>
     </div>
     <div class="card">
       <h3>Apple Debuts HomeView Smart Home Hub and Accessory Lineup</h3>
@@ -570,4 +661,16 @@
       <a href="https://www.cnbc.com/2026/10/14/anthropic-mythos-bank-of-america-hiring-cost.html">Read more →</a>
     </div>
   </div>
-</div></div>
+</div>
+</div>
+
+</div>
+<script>
+  function sendHeight() {
+    window.parent.postMessage({ digestHeight: document.body.scrollHeight }, "*");
+  }
+  window.addEventListener("load", sendHeight);
+  window.addEventListener("resize", sendHeight);
+</script>
+</body>
+</html>
